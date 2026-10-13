@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Variables - Editable Code</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f5f7fb;
+        color: #19263a;
+        font-family: Arial, sans-serif;
+      }
+      .wrap {
+        max-width: 1050px;
+        margin: auto;
+        padding: 30px 16px;
+      }
+      h1 {
+        margin: 0 0 8px;
+      }
+      p {
+        color: #596579;
+        line-height: 1.5;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 25px;
+      }
+      .card {
+        background: white;
+        border: 1px solid #e1e6ef;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 3px 10px #17243a0a;
+      }
+      h2 {
+        font-size: 19px;
+        margin: 0 0 13px;
+      }
+      .card label {
+        display: block;
+        margin-bottom: 7px;
+        font-weight: bold;
+        font-size: 14px;
+      }
+      textarea {
+        font-family: Consolas, monospace;
+        width: 100%;
+        min-height: 112px;
+        resize: vertical;
+        padding: 12px;
+        border: 1px solid #bac6d8;
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 1.5;
+        background: #fbfcff;
+        color: #142339;
+      }
+      button {
+        background: #2458dc;
+        border: 0;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        margin-top: 12px;
+      }
+      button:hover {
+        background: #173fa5;
+      }
+      pre {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        background: #eff5ff;
+        border: 1px solid #d8e4fb;
+        border-radius: 8px;
+        min-height: 55px;
+        padding: 12px;
+        font-size: 13px;
+        margin: 12px 0 0;
+      }
+      small {
+        color: #69768b;
+      }
+      .footer {
+        margin-top: 24px;
+      }
+      .wide {
+        grid-column: 1/-1;
+      }
+      @media (max-width: 700px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .wrap {
+          padding-top: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>JavaScript Variables & Data Types</h1>
+      <p>
+        Edit the JavaScript code in any box and click <b>Run</b>. Its output
+        will appear in that box. You can change variable values and test
+        <code>typeof</code>.
+      </p>
+      <div class="grid">
+        <section class="card">
+          <h2>1. String</h2>
+          <label for="code1">Editable Code</label
+          ><textarea id="code1">
+let studentName = "Rahul";
+console.log(studentName);
+console.log(typeof studentName);</textarea
+          ><button onclick="runCode(1)">▶ Run</button>
+          <pre id="output1">Output will appear here...</pre>
+        </section>
+        <section class="card">
+          <h2>2. Number</h2>
+          <label for="code2">Editable Code</label
+          ><textarea id="code2">
+let age = 20;
+console.log(age);
+console.log(typeof age);</textarea
+          ><button onclick="runCode(2)">▶ Run</button>
+          <pre id="output2">Output will appear here...</pre>
+        </section>
+        <section class="card">
+          <h2>3. Boolean</h2>
+          <label for="code3">Editable Code</label
+          ><textarea id="code3">
+let isStudent = true;
+console.log(isStudent);
+console.log(typeof isStudent);</textarea
+          ><button onclick="runCode(3)">▶ Run</button>
+          <pre id="output3">Output will appear here...</pre>
+        </section>
+        <section class="card">
+          <h2>4. Undefined</h2>
+          <label for="code4">Editable Code</label
+          ><textarea id="code4">
+let city;
+console.log(city);
+console.log(typeof city);</textarea
+          ><button onclick="runCode(4)">▶ Run</button>
+          <pre id="output4">Output will appear here...</pre>
+        </section>
+        <section class="card">
+          <h2>5. Null</h2>
+          <label for="code5">Editable Code</label
+          ><textarea id="code5">
+let emptyValue = null;
+console.log(emptyValue);
+console.log(typeof emptyValue);</textarea
+          ><button onclick="runCode(5)">▶ Run</button>
+          <pre id="output5">Output will appear here...</pre>
+        </section>
+        <section class="card">
+          <h2>6. BigInt</h2>
+          <label for="code6">Editable Code</label
+          ><textarea id="code6">
+let bigNumber = 123456789n;
+console.log(bigNumber);
+console.log(typeof bigNumber);</textarea
+          ><button onclick="runCode(6)">▶ Run</button>
+          <pre id="output6">Output will appear here...</pre>
+        </section>
+        <section class="card">
+          <h2>7. Symbol</h2>
+          <label for="code7">Editable Code</label
+          ><textarea id="code7">
+let uniqueId = Symbol("id");
+console.log(uniqueId);
+console.log(typeof uniqueId);</textarea
+          ><button onclick="runCode(7)">▶ Run</button>
+          <pre id="output7">Output will appear here...</pre>
+        </section>
+        <section class="card">
+          <h2>8. Object (Reference Type)</h2>
+          <label for="code8">Editable Code</label
+          ><textarea id="code8">
+let student = { name: "Rahul", age: 20 };
+console.log(student);
+console.log(typeof student);</textarea
+          ><button onclick="runCode(8)">▶ Run</button>
+          <pre id="output8">Output will appear here...</pre>
+        </section>
+        <section class="card wide">
+          <h2>9. var, let and const</h2>
+          <label for="code9">Editable Code</label
+          ><textarea id="code9">
+var x = 10;
+x = 20;
+let y = 30;
+y = 40;
+const z = 50;
+console.log(x, y, z);</textarea
+          ><button onclick="runCode(9)">▶ Run</button>
+          <pre id="output9">Output will appear here...</pre>
+        </section>
+        <section class="card wide">
+          <h2>10. Type Conversion</h2>
+          <label for="code10">Editable Code</label
+          ><textarea id="code10">
+console.log(Number("100"));
+console.log(String(200));
+console.log(Boolean(0));
+console.log("10" + 5);
+console.log("10" - 5);</textarea
+          ><button onclick="runCode(10)">▶ Run</button>
+          <pre id="output10">Output will appear here...</pre>
+        </section>
+        <section class="card wide">
+          <h2>11. Primitive vs Reference</h2>
+          <label for="code11">Editable Code</label
+          ><textarea id="code11">
+let a = 10;
+let b = a;
+b = 20;
+console.log(a, b);
+
+let first = { score: 10 };
+let second = first;
+second.score = 20;
+console.log(first, second);</textarea
+          ><button onclick="runCode(11)">▶ Run</button>
+          <pre id="output11">Output will appear here...</pre>
+        </section>
+      </div>
+      <p class="footer">
+        <small
+          >Note: JavaScript returns "object" for typeof null. For learning
+          examples only: edited code runs inside this page. Do not paste
+          untrusted code.</small
+        >
+      </p>
+    </div>
+    <script>
+      function runCode(number) {
+        let code = document.getElementById("code" + number).value;
+        let output = document.getElementById("output" + number);
+        let lines = [];
+        let print = (...values) => {
+          let text = values
+            .map((value) => {
+              if (typeof value === "bigint") return value.toString() + "n";
+              if (typeof value === "symbol") return value.toString();
+              if (value === undefined) return "undefined";
+              if (value === null) return "null";
+              if (typeof value === "object") return JSON.stringify(value);
+              return String(value);
+            })
+            .join(" ");
+          lines.push(text);
+        };
+        try {
+          // console.log from the edited example is captured and shown below its box.
+          new Function("console", code)({ log: print });
+          output.textContent = lines.length
+            ? lines.join("\n")
+            : "Code ran successfully (no console.log output).";
+        } catch (error) {
+          output.textContent = "Error: " + error.message;
+        }
+      }
+    </script>
+  </body>
+</html>
